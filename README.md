@@ -11,11 +11,11 @@ Unfortunately, CircleCI 2.0 workflow doesn't support cancellation of redundant b
 
 ## Installation
 
-Ready docker image is available on [Docker Hub](https://hub.docker.com/r/sponomarev/circleci-cancel-builds/).
+Ready docker image is available on [Docker Hub](https://hub.docker.com/r/medmondson/circleci-cancel-builds/).
 
 - Generate CircleCI API using your [account dashboard](https://circleci.com/account/api)
 - Add it as `CIRCLE_TOKEN` environment variable to your [project settings](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project)
-- Add a separate job using `sponomarev/circleci-cancel-builds` docker image as a required first step in your build workflow
+- Add a separate job using `medmondson/circleci-cancel-builds` docker image as a required first step in your build workflow
 - Invoke `run` command 
 
 ```yml
@@ -33,7 +33,7 @@ workflows:
 jobs:
   cancel_redundant_builds:
     docker:
-      - image: sponomarev/circleci-cancel-builds
+      - image: medmondson/circleci-cancel-builds
     steps:
       - run:
           name: Cancelling redundant builds
