@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-LABEL maintainer="Sergey Ponomarev <sponomarev@evilmartians.com>"
+LABEL maintainer="Retail Zipline <info@retailzipline.com>"
  
 RUN apk --no-cache add curl jq
 
